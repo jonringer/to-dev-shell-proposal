@@ -132,7 +132,7 @@ myPackage.toDevShell (stdenv: {
   buildInputs = lib.optionals stdenv.isDarwin [
     CoreServices
   ];
-}
+})
 ```
 
 ## Unresolved issues or concerns
