@@ -81,6 +81,9 @@ in originalArgs // {
   propagatedBuildInputs = mergeInputs "propagatedBuildInputs";
   propagatedNativeBuildInputs = mergeInputs "propagatedNativeBuildInputs";
 
+  # Avoid explicit checkout, and assume that shell will be used on source in repo
+  src = null;
+
   shellHook = lib.concatStringsSep "\n" (lib.catAttrs "shellHook"
     (lib.reverseList inputsFrom ++ [ attrs ]));
 
