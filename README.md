@@ -92,7 +92,7 @@ in originalArgs // {
   buildPhase = ''
     { echo "------------------------------------------------------------";
       echo " WARNING: the existence of this path is not guaranteed.";
-      echo " It is an internal implementation detail for pkgs.mkShell.";
+      echo " It is an internal implementation detail for mkDerivation's toDevShell.";
       echo "------------------------------------------------------------";
       echo;
       # Record all build inputs as runtime dependencies
